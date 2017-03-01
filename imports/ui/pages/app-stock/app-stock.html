@@ -1,0 +1,35 @@
+<template name="App_stock">
+      <h1 class="title">BlockCycle</h1>
+        <span class="titleSmall">
+            <span class="glyphicon glyphicon-bitcoin"></span>lockchain Recycle</span>
+    <div class="content">
+    <h2>Materials being transported </h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Material</th>
+                <th>From</th>
+                <th>To</th>
+                <th>By</th>
+                <th>Address</th>
+            </tr>
+        </thead>
+
+
+        <tbody>
+            <!-- Loop through each registered domain and add it to the table -->
+            {{#each transporting}}
+                <tr>
+                    <td> {{material}} <img class="js-image thumbnail-img"  src="{{photo}}" alt="picture" height="80" width="80" /> </td>
+                    <td>{{ from_address }}</td>
+                    <td>{{ to_identifier }}</td>
+                    <td>{{ Transporter_name }}</td>
+                    <td>{{ Transporter_address}}</td>
+                    <td><button class="btn btn-success js-show-image-form">Received ?</button></td>
+     
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+    </div>
+</template>
